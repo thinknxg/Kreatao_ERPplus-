@@ -250,3 +250,12 @@ app_license = "mit"
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
 
+
+doctype_js = {
+    "Payment Entry": "public/js/payment_entry.js",
+}
+
+process_soa_html = {
+    "General Ledger": ["kreatao_erpplus/templates/process_statement_of_accounts.html"],
+    "Accounts Receivable": ["kreatao_erpplus/templates/process_statement_of_accounts_accounts_receivable.html"],
+}
