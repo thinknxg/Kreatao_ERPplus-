@@ -1,5 +1,5 @@
 app_name = "kreatao_erpplus"
-app_title = "Kreatao Erpplus"
+app_title = ""KREATAO ERP +""
 app_publisher = "krishna"
 app_description = "ERP EXtensions"
 app_email = "kpriyapv20@gmail.com"
