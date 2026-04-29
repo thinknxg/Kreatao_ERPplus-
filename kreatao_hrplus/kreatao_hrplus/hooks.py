@@ -1,5 +1,5 @@
 app_name = "kreatao_hrplus"
-app_title = "Kreatao Hrplus"
+app_title = "KREATAO HR +"
 app_publisher = "Krishna"
 app_description = "HR Extensions"
 app_email = "kpriyapv20@gmail.com"
