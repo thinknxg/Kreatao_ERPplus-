@@ -1,0 +1,32 @@
+ import frappe
+>
+> def autoname(doc, method=None):
+>     if doc.quotation_to == "Lead" and doc.party_name:
+>         lead_id = doc.party_name
+>
+>         # If this is an amended doc, carry forward base name with Rev+1
+>         if doc.amended_from:
+>             original = doc.amended_from
+>             if "-Rev " in original:
+>                 base = original.split("-Rev ")[0]
+>                 current_rev = int(original.split("-Rev ")[1])
+>             else:
+>                 base = original
+>                 current_rev = 0
+>             doc.name = base + "-Rev " + str(current_rev + 1)
+>             return
+>
+>         prefix = frappe.db.get_value("Company", doc.company, "abbr") or "QTN"
+>
+>         count = frappe.db.count("Quotation", filters={
+>             "quotation_to": "Lead",
+>             "party_name": lead_id,
+>         })
+>
+>         serial_num = count + 1
+>         lead_serial = "L" + str(serial_num).zfill(3)
+>
+>         parts = str(doc.transaction_date).split("-")
+>         date_part = parts[2] + parts[1] + parts[0][2:]
+>
+>         doc.name = prefix + "-" + lead_id + "-" + lead_serial + "-" + date_part + "-Rev 0"
