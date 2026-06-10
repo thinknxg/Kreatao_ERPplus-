@@ -1,255 +1,9 @@
 app_name = "kreatao_erpplus"
-app_title = ""KREATAO ERP +""
+app_title = "KREATAO ERP +"
 app_publisher = "krishna"
 app_description = "ERP EXtensions"
 app_email = "kpriyapv20@gmail.com"
 app_license = "mit"
-
-# Apps
-# ------------------
-
-# required_apps = []
-
-# Each item in the list will be shown as an app in the apps page
-# add_to_apps_screen = [
-# 	{
-# 		"name": "kreatao_erpplus",
-# 		"logo": "/assets/kreatao_erpplus/logo.png",
-# 		"title": "Kreatao Erpplus",
-# 		"route": "/kreatao_erpplus",
-# 		"has_permission": "kreatao_erpplus.api.permission.has_app_permission"
-# 	}
-# ]
-
-# Includes in <head>
-# ------------------
-
-# include js, css files in header of desk.html
-# app_include_css = "/assets/kreatao_erpplus/css/kreatao_erpplus.css"
-# app_include_js = "/assets/kreatao_erpplus/js/kreatao_erpplus.js"
-
-# include js, css files in header of web template
-# web_include_css = "/assets/kreatao_erpplus/css/kreatao_erpplus.css"
-# web_include_js = "/assets/kreatao_erpplus/js/kreatao_erpplus.js"
-
-# include custom scss in every website theme (without file extension ".scss")
-# website_theme_scss = "kreatao_erpplus/public/scss/website"
-
-# include js, css files in header of web form
-# webform_include_js = {"doctype": "public/js/doctype.js"}
-# webform_include_css = {"doctype": "public/css/doctype.css"}
-
-# include js in page
-# page_js = {"page" : "public/js/file.js"}
-
-# include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
-# doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
-# doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
-# doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
-
-# Svg Icons
-# ------------------
-# include app icons in desk
-# app_include_icons = "kreatao_erpplus/public/icons.svg"
-
-# Home Pages
-# ----------
-
-# application home page (will override Website Settings)
-# home_page = "login"
-
-# website user home page (by Role)
-# role_home_page = {
-# 	"Role": "home_page"
-# }
-
-# Generators
-# ----------
-
-# automatically create page for each record of this doctype
-# website_generators = ["Web Page"]
-
-# automatically load and sync documents of this doctype from downstream apps
-# importable_doctypes = [doctype_1]
-
-# Jinja
-# ----------
-
-# add methods and filters to jinja environment
-# jinja = {
-# 	"methods": "kreatao_erpplus.utils.jinja_methods",
-# 	"filters": "kreatao_erpplus.utils.jinja_filters"
-# }
-
-# Installation
-# ------------
-
-# before_install = "kreatao_erpplus.install.before_install"
-# after_install = "kreatao_erpplus.install.after_install"
-
-# Uninstallation
-# ------------
-
-# before_uninstall = "kreatao_erpplus.uninstall.before_uninstall"
-# after_uninstall = "kreatao_erpplus.uninstall.after_uninstall"
-
-# Integration Setup
-# ------------------
-# To set up dependencies/integrations with other apps
-# Name of the app being installed is passed as an argument
-
-# before_app_install = "kreatao_erpplus.utils.before_app_install"
-# after_app_install = "kreatao_erpplus.utils.after_app_install"
-
-# Integration Cleanup
-# -------------------
-# To clean up dependencies/integrations with other apps
-# Name of the app being uninstalled is passed as an argument
-
-# before_app_uninstall = "kreatao_erpplus.utils.before_app_uninstall"
-# after_app_uninstall = "kreatao_erpplus.utils.after_app_uninstall"
-
-# Desk Notifications
-# ------------------
-# See frappe.core.notifications.get_notification_config
-
-# notification_config = "kreatao_erpplus.notifications.get_notification_config"
-
-# Permissions
-# -----------
-# Permissions evaluated in scripted ways
-
-# permission_query_conditions = {
-# 	"Event": "frappe.desk.doctype.event.event.get_permission_query_conditions",
-# }
-#
-# has_permission = {
-# 	"Event": "frappe.desk.doctype.event.event.has_permission",
-# }
-
-# Document Events
-# ---------------
-# Hook on document methods and events
-
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-# 	}
-# }
-
-# Scheduled Tasks
-# ---------------
-
-# scheduler_events = {
-# 	"all": [
-# 		"kreatao_erpplus.tasks.all"
-# 	],
-# 	"daily": [
-# 		"kreatao_erpplus.tasks.daily"
-# 	],
-# 	"hourly": [
-# 		"kreatao_erpplus.tasks.hourly"
-# 	],
-# 	"weekly": [
-# 		"kreatao_erpplus.tasks.weekly"
-# 	],
-# 	"monthly": [
-# 		"kreatao_erpplus.tasks.monthly"
-# 	],
-# }
-
-# Testing
-# -------
-
-# before_tests = "kreatao_erpplus.install.before_tests"
-
-# Extend DocType Class
-# ------------------------------
-#
-# Specify custom mixins to extend the standard doctype controller.
-# extend_doctype_class = {
-# 	"Task": "kreatao_erpplus.custom.task.CustomTaskMixin"
-# }
-
-# Overriding Methods
-# ------------------------------
-#
-# override_whitelisted_methods = {
-# 	"frappe.desk.doctype.event.event.get_events": "kreatao_erpplus.event.get_events"
-# }
-#
-# each overriding function accepts a `data` argument;
-# generated from the base implementation of the doctype dashboard,
-# along with any modifications made in other Frappe apps
-# override_doctype_dashboards = {
-# 	"Task": "kreatao_erpplus.task.get_dashboard_data"
-# }
-
-# exempt linked doctypes from being automatically cancelled
-#
-# auto_cancel_exempted_doctypes = ["Auto Repeat"]
-
-# Ignore links to specified DocTypes when deleting documents
-# -----------------------------------------------------------
-
-# ignore_links_on_delete = ["Communication", "ToDo"]
-
-# Request Events
-# ----------------
-# before_request = ["kreatao_erpplus.utils.before_request"]
-# after_request = ["kreatao_erpplus.utils.after_request"]
-
-# Job Events
-# ----------
-# before_job = ["kreatao_erpplus.utils.before_job"]
-# after_job = ["kreatao_erpplus.utils.after_job"]
-
-# User Data Protection
-# --------------------
-
-# user_data_fields = [
-# 	{
-# 		"doctype": "{doctype_1}",
-# 		"filter_by": "{filter_by}",
-# 		"redact_fields": ["{field_1}", "{field_2}"],
-# 		"partial": 1,
-# 	},
-# 	{
-# 		"doctype": "{doctype_2}",
-# 		"filter_by": "{filter_by}",
-# 		"partial": 1,
-# 	},
-# 	{
-# 		"doctype": "{doctype_3}",
-# 		"strict": False,
-# 	},
-# 	{
-# 		"doctype": "{doctype_4}"
-# 	}
-# ]
-
-# Authentication and authorization
-# --------------------------------
-
-# auth_hooks = [
-# 	"kreatao_erpplus.auth.validate"
-# ]
-
-# Automatically update python controller files with type annotations for this app.
-# export_python_type_annotations = True
-
-# default_log_clearing_doctypes = {
-# 	"Logging DocType Name": 30  # days to retain logs
-# }
-
-# Translation
-# ------------
-# List of apps whose translatable strings should be excluded from this app's translations.
-# ignore_translatable_strings_from = []
-
 
 doctype_js = {
     "Payment Entry": "public/js/payment_entry.js",
@@ -259,3 +13,39 @@ process_soa_html = {
     "General Ledger": ["kreatao_erpplus/templates/process_statement_of_accounts.html"],
     "Accounts Receivable": ["kreatao_erpplus/templates/process_statement_of_accounts_accounts_receivable.html"],
 }
+
+override_doctype_class = {
+    "Quotation": "kreatao_erpplus.quotation_naming.CustomQuotation"
+}
+
+override_doctype_dashboards = {
+    "Lead": "kreatao_erpplus.overrides.lead_dashboard.get_data",
+    "Customer": "kreatao_erpplus.overrides.customer_dashboard.get_data",
+}
+
+override_whitelisted_methods = {
+    "erpnext.selling.doctype.quotation.quotation._make_customer": "kreatao_erpplus.overrides.quotation_patch.make_customer_from_quotation",
+}
+
+after_migrate = [
+    "kreatao_erpplus.patches.fix_quotation_make_customer.execute"
+]
+
+fixtures = [
+    {"dt": "Client Script", "filters": [["name", "in", [
+        "Lead-Prospect-Buttons",
+        "Quotation-Customer-Autofill",
+        "Lead-View-Customer",
+        "GWM Quotation Naming Series Fix"
+    ]]]},
+    {"dt": "Server Script", "filters": [["name", "in", [
+        "GWM Quotation Cancel Rev",
+        "GWM Quotation Auto Name",
+        "save_item_prices",
+        "fetch_item_prices"
+    ]]]},
+    {"dt": "Custom Field", "filters": [["dt", "in", [
+        "Lead", "Opportunity", "Project", "Project Milestone",
+        "Quotation", "Customer", "CRM Deal"
+    ]]]}
+]
