@@ -7,6 +7,10 @@ app_license = "mit"
 doctype_js = {
     "Payment Entry": "public/js/payment_entry.js",
 }
+
+app_include_js = [
+    "/assets/kreatao_erpplus/js/override_crm_banner.js",
+]
 process_soa_html = {
     "General Ledger": ["kreatao_erpplus/templates/process_statement_of_accounts.html"],
     "Accounts Receivable": ["kreatao_erpplus/templates/process_statement_of_accounts_accounts_receivable.html"],
@@ -26,20 +30,21 @@ after_migrate = [
     "kreatao_erpplus.patches.remove_swift_unique.execute"
 ]
 fixtures = [
-    {"dt": "Client Script", "filters": [["name", "in", [
-        "Lead-Prospect-Buttons",
-        "Quotation-Customer-Autofill",
-        "Lead-View-Customer",
-        "GWM Quotation Naming Series Fix"
+    {"dt": "Client Script", "filters": [["dt", "in", [
+        "Lead", "Quotation", "Contract", "Project", "Sales Invoice"
     ]]]},
-    {"dt": "Server Script", "filters": [["name", "in", [
-        "GWM Quotation Cancel Rev",
-        "GWM Quotation Auto Name",
-        "save_item_prices",
-        "fetch_item_prices"
+    {"dt": "Server Script", "filters": [["reference_doctype", "in", [
+        "Quotation", "Project"
     ]]]},
     {"dt": "Custom Field", "filters": [["dt", "in", [
         "Lead", "Opportunity", "Project", "Project Milestone",
-        "Quotation", "Customer", "CRM Deal"
+        "Quotation", "Customer", "CRM Deal",
+        "Contract", "Contract Item Rate", "Employee", "Sales Invoice", "Sales Order", "Price List", "Shift Type", "Task", "Timesheet"
+    ]]]},
+    {"dt": "Property Setter", "filters": [["doc_type", "in", [
+        "Sales Invoice", "Timesheet", "Timesheet Detail", "Project", "Contract", "Task"
+    ]]]},
+    {"dt": "DocType", "filters": [["name", "in", [
+        "Contract Approved Item"
     ]]]}
 ]
